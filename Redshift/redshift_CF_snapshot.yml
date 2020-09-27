@@ -1,0 +1,15 @@
+Parameters:
+  SnapshotName:
+    Description: Name of Redshift Cluster
+    Type: String
+    Default: examplecluster
+Resources:
+  RedhshiftClus:
+    Type: 'AWS::Redshift::Cluster'
+    Properties:
+      ClusterType: multi-node
+      DBName: dev
+      MasterUsername: priyesh18
+      MasterUserPassword: Priyesh18!
+      NodeType: dc2.large
+      SnapshotIdentifier: !Ref SnapshotName
