@@ -1,8 +1,5 @@
-import json
-import boto3
 from processor import Processor
 
-lambda_client = boto3.client('lambda')
 
 def get_items_to_process():
     return ['a', 'b', 'c','d']
